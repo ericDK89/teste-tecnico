@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const GradeStyle = styled.div`
   display: flex;
+  width: 100%;
 `
 
 export const GradeContainer = styled.div`
@@ -20,10 +21,14 @@ export const GradeContext = styled.div`
   p {
     font-size: 1.125rem;
     font-weight: 500;
+
+    padding: 0;
+    margin: 0;
   }
 
   span {
     font-size: 0.75rem;
+    display: block;
   }
 `
 
@@ -32,6 +37,7 @@ export const GradeInfo = styled.div`
   align-items: center;
   gap: 6.43px;
 
+  margin-top: 1.rem;
   padding: 5px 13.82px;
 
   width: 100%;
@@ -41,6 +47,8 @@ export const GradeInfo = styled.div`
   p {
     font-size: 0.75rem;
     color: #ff5964;
+    padding: 0;
+    margin: 0;
   }
 `
 
