@@ -1,15 +1,9 @@
 import styled from "styled-components";
 
-interface TitleProps {
-  margin?: string;
-}
-
-export const TitleContainer = styled.div<TitleProps>`
+export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin: ${(props) => props.margin || 0} ;
 `
 
 export const TitleStyle = styled.h3`
@@ -28,4 +22,14 @@ export const AddButton = styled.button`
   background-color: #e9ff1a;
 
   line-height: 0;
+
+  @media screen and (min-width: 430px) {
+  width: 11.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-weight: 600;
+  }
 `

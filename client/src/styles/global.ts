@@ -28,5 +28,10 @@ a {
 
 button {
   cursor: pointer;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(.7);
+  }
 }
 `

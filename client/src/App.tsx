@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Grade } from "./components/Grade"
 import { Title } from "./components/Title"
 import { GlobalStyles } from "./styles/global"
-import { Container, Context } from "./styles/styles"
+import { Box, Container, Context } from "./styles/styles"
 import { ModalContainer } from "./components/Modal"
 
 export const App = () => {
@@ -14,39 +14,39 @@ export const App = () => {
   return (
     <>
       <Container>
-        <Title
-          title="Bimestre 1"
-          margin={"0 0 25px"}
-          handleOpenModal={handleOpenModal}
-        />
-        <Context>
-          <Grade />
-          <Grade />
-          <Grade />
-          <Grade />
+        <Box>
+          <Title title="Bimestre 1" handleOpenModal={handleOpenModal} />
+          <Context>
+            <Grade />
+            <Grade />
+            <Grade />
+            <Grade />
 
-          <ModalContainer
-            showModal={showModal}
-            handleCloseModal={handleCloseModal}
-          />
-        </Context>
+            <ModalContainer
+              showModal={showModal}
+              handleCloseModal={handleCloseModal}
+            />
+          </Context>
+        </Box>
 
-        <Title
-          title="Bimestre 1"
-          margin={"25px 0"}
-          handleOpenModal={handleOpenModal}
-        />
-        <Context>
-          <Grade />
-          <Grade />
-          <Grade />
-          <Grade />
+        <Box>
+          <Title title="Bimestre 1" handleOpenModal={handleOpenModal} />
+          <Context>
+            <Grade />
+            <Grade />
+            <Grade />
+            <Grade />
 
-          <ModalContainer
-            showModal={showModal}
-            handleCloseModal={handleCloseModal}
-          />
-        </Context>
+            <ModalContainer
+              showModal={showModal}
+              handleCloseModal={handleCloseModal}
+            />
+          </Context>
+        </Box>
+
+        <Box>
+          <Title title="Bimestre 1" handleOpenModal={handleOpenModal} />
+        </Box>
       </Container>
       <GlobalStyles />
     </>

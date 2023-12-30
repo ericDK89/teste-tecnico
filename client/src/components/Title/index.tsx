@@ -3,16 +3,24 @@ import plusImg from "../../assets/plus.png"
 
 interface TitleProps {
   title: string
-  margin?: string
   handleOpenModal: () => void
 }
 
-export const Title = ({ title, margin, handleOpenModal }: TitleProps) => {
+export const Title = ({ title, handleOpenModal }: TitleProps) => {
+  console.log(innerWidth)
+
   return (
-    <TitleContainer margin={margin}>
+    <TitleContainer>
       <TitleStyle>{title}</TitleStyle>
       <AddButton type="button" onClick={handleOpenModal}>
-        <img src={plusImg} alt="#" title="Lançar nota" />
+        {innerWidth > 430 ? (
+          <>
+            <span>Lançar nota</span>
+            <img src={plusImg} alt="#" title="Lançar nota" />
+          </>
+        ) : (
+          <img src={plusImg} alt="#" title="Lançar nota" />
+        )}
       </AddButton>
     </TitleContainer>
   )
