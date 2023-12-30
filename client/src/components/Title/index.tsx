@@ -7,8 +7,6 @@ interface TitleProps {
 }
 
 export const Title = ({ title, handleOpenModal }: TitleProps) => {
-  console.log(innerWidth)
-
   return (
     <TitleContainer>
       <TitleStyle>{title}</TitleStyle>

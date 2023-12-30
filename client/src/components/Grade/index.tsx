@@ -2,19 +2,25 @@ import * as S from "./styles"
 import redStaticImg from "../../assets/red-statics.png"
 import trashImg from "../../assets/trash.png"
 
-export const Grade = () => {
+interface GradeProps {
+  title: string
+  createdAt: string
+  grade: number
+}
+
+export const Grade = ({ title, createdAt, grade }: GradeProps) => {
   return (
     <>
       <S.GradeStyle>
         <S.GradeContainer>
           <S.GradeContext>
-            <p>Biologia</p>
-            <span>28/04/2022</span>
+            <p>{title}</p>
+            <span>{createdAt}</span>
           </S.GradeContext>
 
           <S.GradeInfo>
             <img src={redStaticImg} alt="#" />
-            <p>Nota: 3</p>
+            <p>Nota: {grade}</p>
           </S.GradeInfo>
         </S.GradeContainer>
 
