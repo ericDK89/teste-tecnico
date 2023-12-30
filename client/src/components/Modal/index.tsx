@@ -37,7 +37,9 @@ export const ModalContainer = ({
               <h6>Disciplina</h6>
               <S.Subjects>
                 {grades.map((grade) => (
-                  <S.Subject key={grade.id}>{grade.title}</S.Subject>
+                  <S.Subject title={grade.title} key={grade.id}>
+                    {grade.title}
+                  </S.Subject>
                 ))}
               </S.Subjects>
             </div>

@@ -1,5 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components"
 import Modal from "react-bootstrap/Modal"
+
+interface SubjectProps {
+  title: string
+}
 
 export const ModalBody = styled(Modal.Body)`
   padding: 2rem 2.5rem;
@@ -43,9 +47,29 @@ export const Subjects = styled.div`
   margin-bottom: 1.125rem;
 `
 
-export const Subject = styled.div`
+export const Subject = styled.div<SubjectProps>`
   padding: 1.125rem;
-  background-color: rgba(204, 64, 144, .2);
+
+  ${({ title }) =>
+    css`
+      ${title === "Biologia" &&
+      css`
+        background-color: rgba(204, 64, 144, 0.2);
+      `}
+      ${title === "Artes" &&
+      css`
+        background-color: rgba(5, 162, 194, 0.2);
+      `}
+      ${title === "Geografia" &&
+      css`
+        background-color: rgba(194, 103, 25, 0.2);
+      `}
+      ${title === "Sociologia" &&
+      css`
+        background-color: rgba(155, 25, 194, 0.2);
+      `}
+    `}
+
   border-radius: 20px;
 
   font-size: 1.125rem;
@@ -56,7 +80,7 @@ export const Subject = styled.div`
 
 export const GradeInfo = styled.div`
   p {
-    font-size: .875rem;
+    font-size: 0.875rem;
     color: #ecedee;
     margin-bottom: 0.5rem;
   }
@@ -84,7 +108,7 @@ export const Footer = styled.footer`
 
     border-radius: 12px;
     border: none;
-    
+
     font-weight: 600;
   }
 `
