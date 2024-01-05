@@ -1,6 +1,6 @@
 import { type FastifyInstance } from "fastify"
-import { create } from "../controllers/create"
+import { gradesRoutes } from "./grades"
 
 export const routes = async (app: FastifyInstance) => {
-  app.post("/results", create)
+  app.register(gradesRoutes)
 }
