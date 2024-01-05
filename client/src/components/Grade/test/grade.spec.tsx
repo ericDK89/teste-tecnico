@@ -13,7 +13,7 @@ describe("Test for Grade", () => {
 
     const { getByText } = screen
 
-    expect(getByText(gradeProps.grade.toString())).toBeGreaterThanOrEqual(0)
-    expect(getByText(gradeProps.grade.toString())).toBeLessThanOrEqual(10)
+    expect(getByText(gradeProps.grade)).toBeGreaterThanOrEqual(0)
+    expect(getByText(gradeProps.grade)).toBeLessThanOrEqual(10)
   })
 })
