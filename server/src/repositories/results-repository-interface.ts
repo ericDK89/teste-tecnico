@@ -1,10 +1,5 @@
 import { Result } from "@prisma/client"
-
-interface ICreate {
-  bimester: "PRIMEIRO" | "SEGUNDO" | "TERCEIRO" | "QUARTO"
-  grade: number
-  subject: "BIOLOGIA" | "ARTES" | "SOCIOLOGIA" | "GEOGRAFIA"
-}
+import { ICreate } from "../utils/create-zod-interface"
 
 export interface ResultsRepository {
   listing(): Promise<Result>
