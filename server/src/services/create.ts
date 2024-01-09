@@ -1,10 +1,5 @@
 import { ResultsRepository } from "../repositories/results-repository-interface"
-
-interface ICreate {
-  bimester: "PRIMEIRO" | "SEGUNDO" | "TERCEIRO" | "QUARTO"
-  grade: number
-  subject: "BIOLOGIA" | "ARTES" | "SOCIOLOGIA" | "GEOGRAFIA"
-}
+import { ICreate } from "../utils/create-zod-interface"
 
 export class CreateService {
   constructor(private resultsRepository: ResultsRepository) {}

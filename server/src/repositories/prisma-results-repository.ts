@@ -8,17 +8,23 @@ export class PrismaResultsRepository implements ResultsRepository {
     await prisma.result.create({ data })
   }
 
-  async listing(): Promise<Result> {
-    const result = await prisma.result.findFirst()
-
-    if (!result) {
-      throw new Error("Could not find result")
-    }
+  async listing(): Promise<Result[]> {
+    const result = await prisma.result.findMany()
 
     return result
   }
 
   async remove(id: string): Promise<void> {
+    const result = await prisma.result.findUnique({
+      where: {
+        id,
+      },
+    })
+
+    if (!result) {
+      return
+    }
+
     await prisma.result.delete({
       where: {
         id,
